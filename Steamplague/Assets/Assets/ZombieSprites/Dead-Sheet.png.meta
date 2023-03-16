@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ca5237c2b655d884bbefcc3c90afc444
+guid: 9c3f1903f6235544aafa719ddf658451
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SteamMan_climb_0
+      name: Dead-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 48
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,41 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1142883fe95c52c47aed7828b82adc8f
-      internalID: -289246645
+      spriteID: 4a5bbeec0b2056e4798cbcebfda17345
+      internalID: 1072161912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SteamMan_climb_1
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ee2b123dac85d143b8e8fc9460d8b89
-      internalID: 1751771036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamMan_climb_2
+      name: Dead-Sheet_1
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 32
-        height: 48
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,41 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4993762a70750546bb85fd0d9fdba56
-      internalID: -152065328
+      spriteID: 9b240443ec9bbfd4d9a627c0405b734d
+      internalID: -294397042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SteamMan_climb_3
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 015c54603091357458f4f37b18cc9928
-      internalID: -1367658357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamMan_climb_4
+      name: Dead-Sheet_2
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 32
-        height: 48
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f2b606e0a1159f4ab0a86acf59b347f
-      internalID: -844799193
+      spriteID: 6affb87f1c99c224db99805940469f17
+      internalID: -1017085630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SteamMan_climb_5
+      name: Dead-Sheet_3
       rect:
         serializedVersion: 2
-        x: 240
+        x: 288
         y: 0
-        width: 32
-        height: 48
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,8 +194,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b23cdc0774fc5c140a8de946568e4ee2
-      internalID: 1258807853
+      spriteID: 6c85cf71cf24f334bba9ce3548c1c9b6
+      internalID: -994390215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9abaa5de7da8277458e1f836dbb99eb4
+      internalID: -809698322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e22288ff522027438e204268b32556a
+      internalID: -1824499577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1fbe5574d69f6f4494562f6641872b6
+      internalID: 568126944
       vertices: []
       indices: 
       edges: []
@@ -253,12 +274,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SteamMan_climb_0: -289246645
-      SteamMan_climb_1: 1751771036
-      SteamMan_climb_2: -152065328
-      SteamMan_climb_3: -1367658357
-      SteamMan_climb_4: -844799193
-      SteamMan_climb_5: 1258807853
+      Dead-Sheet_0: 1072161912
+      Dead-Sheet_1: -294397042
+      Dead-Sheet_2: -1017085630
+      Dead-Sheet_3: -994390215
+      Dead-Sheet_4: -809698322
+      Dead-Sheet_5: -1824499577
+      Dead-Sheet_6: 568126944
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

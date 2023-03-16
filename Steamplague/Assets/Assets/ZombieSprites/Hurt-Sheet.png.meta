@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ca5237c2b655d884bbefcc3c90afc444
+guid: e69886df5e1fed84fb37dcfcf6c5eaa7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SteamMan_climb_0
+      name: Hurt-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 48
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,41 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1142883fe95c52c47aed7828b82adc8f
-      internalID: -289246645
+      spriteID: 0a642ceba6401ed45bb6710e04690089
+      internalID: -1987844661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SteamMan_climb_1
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ee2b123dac85d143b8e8fc9460d8b89
-      internalID: 1751771036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamMan_climb_2
+      name: Hurt-Sheet_1
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 32
-        height: 48
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,41 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4993762a70750546bb85fd0d9fdba56
-      internalID: -152065328
+      spriteID: 44fdbf654401ba540a5e2d748163eda3
+      internalID: 2144927624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SteamMan_climb_3
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 015c54603091357458f4f37b18cc9928
-      internalID: -1367658357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamMan_climb_4
+      name: Hurt-Sheet_2
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 32
-        height: 48
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,29 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f2b606e0a1159f4ab0a86acf59b347f
-      internalID: -844799193
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamMan_climb_5
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 32
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b23cdc0774fc5c140a8de946568e4ee2
-      internalID: 1258807853
+      spriteID: ec92b0469dd0d17479de7d2904d4288a
+      internalID: 2080068132
       vertices: []
       indices: 
       edges: []
@@ -253,12 +190,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SteamMan_climb_0: -289246645
-      SteamMan_climb_1: 1751771036
-      SteamMan_climb_2: -152065328
-      SteamMan_climb_3: -1367658357
-      SteamMan_climb_4: -844799193
-      SteamMan_climb_5: 1258807853
+      Hurt-Sheet_0: -1987844661
+      Hurt-Sheet_1: 2144927624
+      Hurt-Sheet_2: 2080068132
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

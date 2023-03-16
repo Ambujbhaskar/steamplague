@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D player;
     private Animator playerAnim;
     private SpriteRenderer playerSprite;
-    private BoxCollider2D playerCollider;
+    private CapsuleCollider2D playerCollider;
     [SerializeField] private LayerMask jumpableGround;
     [SerializeField] private float jumpVelocity = 14f;
     [SerializeField] private float horizontalVelocity = 10f;
@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
         player = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
         playerSprite = GetComponent<SpriteRenderer>();
-        playerCollider = GetComponent<BoxCollider2D>();
+        playerCollider = GetComponent<CapsuleCollider2D>();
         // playerAnim.SetBool("entry", true);
     }
 
@@ -55,11 +55,11 @@ public class PlayerMovement : MonoBehaviour
             state = MovementState.idle;
         }
 
-        if (vel.y > 0.1f)
+        if (vel.y > 0f && !IsGrounded())
         {
             state = MovementState.jumping;
         }
-        else if (vel.y < -0.1f)
+        else if (vel.y < 0f && !IsGrounded())
         {
             state = MovementState.falling;
         }
