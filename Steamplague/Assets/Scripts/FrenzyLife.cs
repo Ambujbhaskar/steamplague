@@ -52,6 +52,10 @@ public class FrenzyLife : MonoBehaviour
         GetComponent<Collider2D>().enabled = true;
     }
 
+    private void DestroyZombie() {
+        Destroy(gameObject);
+    }
+
     // private void RestartLevel()
     // {
     //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);

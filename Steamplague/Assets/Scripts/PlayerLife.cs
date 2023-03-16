@@ -31,20 +31,29 @@ public class PlayerLife : MonoBehaviour
     {
         Debug.Log("Player Ded");
         playerAnim.SetTrigger("death");
-        FreezePlayer();
+        DisablePlayer();
+    }    
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Deathzone"))
+        {
+            Die();
+        }
     }
 
-    private void FreezePlayer() {
-        player.bodyType = RigidbodyType2D.Static;
+
+    private void DisablePlayer() {
         this.enabled = false;
         GetComponent<PlayerMovement>().enabled = false;
-        GetComponent<Collider2D>().enabled = false;
     }
-    private void UnfreezePlayer() {
-        player.bodyType = RigidbodyType2D.Static;
+    private void EnablePlayer() {
         this.enabled = true;
         GetComponent<PlayerMovement>().enabled = true;
-        GetComponent<Collider2D>().enabled = true;
+    }
+
+    private void DestroyPlayer() {
+        Destroy(gameObject);
     }
 
     // private void RestartLevel()

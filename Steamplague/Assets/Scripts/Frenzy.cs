@@ -116,7 +116,8 @@ public class Frenzy : MonoBehaviour
 
         foreach(Collider2D enemy in hitEnemies) {
             Debug.Log("Hitting: "+ enemy.name);
-            enemy.GetComponent<PlayerLife>().TakeDamage(attackDamage);
+            if (enemy.name != "FrenziedWorker")
+                enemy.GetComponent<PlayerLife>().TakeDamage(attackDamage);
         }
     }
 
