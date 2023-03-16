@@ -9,8 +9,10 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer playerSprite;
     private BoxCollider2D playerCollider;
     [SerializeField] private LayerMask jumpableGround;
-    [SerializeField] private float jumpVelocity = 14f;
-    [SerializeField] private float horizontalVelocity = 10f;
+    [SerializeField] private float jumpVelocity = 5f;
+    [SerializeField] private float horizontalVelocity = 5f;
+
+    private bool jumpPressed = false;
 
     private enum MovementState { idle, running, jumping, falling };
 
@@ -26,11 +28,23 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         float dirX = Input.GetAxis("Horizontal");
-        player.velocity = new Vector2(dirX * horizontalVelocity, player.velocity.y);
+        if (player.velocity.x > horizontalVelocity)
+            player.velocity = new Vector2(player.velocity.x - 0.01f, player.velocity.y);
+        else if (player.velocity.x < -1 * horizontalVelocity)
+            player.velocity = new Vector2(player.velocity.x + 0.01f, player.velocity.y);
+        else
+            player.velocity = new Vector2(dirX * horizontalVelocity, player.velocity.y);
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            player.velocity = new Vector2(player.velocity.x, jumpVelocity);
+            float xVel = player.velocity.x;
+            float yVel = jumpVelocity;
+            if (xVel >= 4.5f || xVel <= -4.5f)
+                xVel = xVel + (xVel / 2);
+            else if (xVel <= 1 || xVel >= -1)
+                yVel = jumpVelocity + 0.5f;
+            player.velocity = new Vector2(xVel, yVel);
+            jumpPressed = true;
         }
         UpdateAnimation(dirX);
     }
@@ -55,13 +69,14 @@ public class PlayerMovement : MonoBehaviour
             state = MovementState.idle;
         }
 
-        if (vel.y > 0.1f)
+        if (vel.y > 0.1f && jumpPressed)
         {
             state = MovementState.jumping;
         }
-        else if (vel.y < -0.1f)
+        else if (vel.y < -0.2f)
         {
             state = MovementState.falling;
+            jumpPressed = false;
         }
 
         playerAnim.SetInteger("state", (int)state);
