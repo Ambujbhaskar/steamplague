@@ -5704,7 +5704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombieSprite: {fileID: 1148578177}
-  zombieCollider: {fileID: 1148578179}
+  zombieCollider: {fileID: 1148578175}
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -5722,11 +5722,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 1148578173}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 82abb430658066d4a8a50728b0e6f16d, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07776797, y: -0.18589711}
+  m_Offset: {x: 0, y: -0.2}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5737,7 +5737,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8534535, y: 1.1310105}
+  m_Size: {x: 0.64, y: 1.14}
   m_EdgeRadius: 0
 --- !u!50 &1148578176
 Rigidbody2D:
@@ -5840,7 +5840,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.35304564, y: -0.1874528}
+  m_Offset: {x: 0, y: -0.2}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5851,7 +5851,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7088479, y: 1.1250944}
+  m_Size: {x: 1.77, y: 0.9}
   m_EdgeRadius: 0
 --- !u!1 &1471170948
 GameObject:
@@ -7569,8 +7569,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1934169103}
   - component: {fileID: 1934169102}
-  - component: {fileID: 1934169101}
   - component: {fileID: 1934169100}
+  - component: {fileID: 1934169101}
+  - component: {fileID: 1934169106}
   - component: {fileID: 1934169104}
   - component: {fileID: 1934169105}
   m_Layer: 7
@@ -7731,6 +7732,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!61 &1934169106
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934169099}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.06, y: -0.2}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1943560091
 GameObject:
   m_ObjectHideFlags: 0
