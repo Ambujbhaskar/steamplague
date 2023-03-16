@@ -20,6 +20,7 @@ public class Frenzy : MonoBehaviour
     [SerializeField] private int attackDamage = 20;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private float attackRate = 0.6f;
+    [SerializeField] private float knockbackVelocity = 2f;
     private float nextAttackTime = 0f;
     private Transform activeAttackPoint;
 
@@ -39,7 +40,7 @@ public class Frenzy : MonoBehaviour
     private void Update()
     {
         if (Time.time >= nextAttackTime && workerAnim.GetInteger("state") == 3) {
-            Attack();
+            workerAnim.SetTrigger("attack");
             nextAttackTime = Time.time + 1f / attackRate;
         }
         float dirX = 0;
@@ -77,9 +78,14 @@ public class Frenzy : MonoBehaviour
             {
                 if (distX < attackTrigger && distX > -attackTrigger)
                 {
-                    // start attacking
-                    state = MovementState.attack;
-                    dirX *= 0.1f;
+                    if (distX < 0.1f && distX > -0.1f) {
+                        state = MovementState.idle;
+                        dirX = 0f;
+                    } else {
+                        // start attacking
+                        state = MovementState.attack;
+                        dirX *= 0.1f;
+                    }
                 }
                 else
                 {
@@ -111,6 +117,15 @@ public class Frenzy : MonoBehaviour
         foreach(Collider2D enemy in hitEnemies) {
             Debug.Log("Hitting: "+ enemy.name);
             enemy.GetComponent<PlayerLife>().TakeDamage(attackDamage);
+        }
+    }
+
+    public void Knockback() {
+        float distX = (playerTransform.position.x - transform.position.x);
+        if (distX > 0f) {
+            worker.velocity = new Vector2(-knockbackVelocity * velocity, worker.velocity.y);
+        } else if (distX < 0f) {
+            worker.velocity = new Vector2(-knockbackVelocity * velocity, worker.velocity.y);
         }
     }
 

@@ -37,17 +37,19 @@ public class PlayerLife : MonoBehaviour
     private void FreezePlayer() {
         player.bodyType = RigidbodyType2D.Static;
         this.enabled = false;
+        GetComponent<PlayerMovement>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
     }
     private void UnfreezePlayer() {
         player.bodyType = RigidbodyType2D.Static;
         this.enabled = true;
+        GetComponent<PlayerMovement>().enabled = true;
         GetComponent<Collider2D>().enabled = true;
     }
 
-    private void RestartLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        UnfreezePlayer();
-    }
+    // private void RestartLevel()
+    // {
+    //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    //     UnfreezePlayer();
+    // }
 }

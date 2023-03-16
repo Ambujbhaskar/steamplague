@@ -2496,6 +2496,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1934169103}
+--- !u!1 &527439388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 527439389}
+  m_Layer: 0
+  m_Name: PlayerAttackRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &527439389
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527439388}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.47, y: -0.32, z: 0.1454336}
+  m_LocalScale: {x: 0.58823526, y: 0.58823526, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1934169103}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &532754451
 GameObject:
   m_ObjectHideFlags: 0
@@ -14218,7 +14249,7 @@ SpriteRenderer:
   m_SortingLayerID: 999018303
   m_SortingLayer: 1
   m_SortingOrder: 3
-  m_Sprite: {fileID: 27218275, guid: 96e22a3c700e0cf45b4418fed4de71f6, type: 3}
+  m_Sprite: {fileID: -598787459, guid: 6f88ba9019325484e925d0967656d678, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14240,7 +14271,9 @@ Transform:
   m_LocalPosition: {x: -3.35, y: 0.35, z: 0}
   m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2134834654}
+  - {fileID: 527439389}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14261,6 +14294,14 @@ MonoBehaviour:
     m_Bits: 64
   jumpVelocity: 6.5
   horizontalVelocity: 5
+  attackPointLeft: {fileID: 2134834654}
+  attackPointRight: {fileID: 527439389}
+  attackRange: 0.5
+  attackDamage: 20
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  attackRate: 2
 --- !u!95 &1934169105
 Animator:
   serializedVersion: 5
@@ -15620,6 +15661,7 @@ GameObject:
   - component: {fileID: 1986951856}
   - component: {fileID: 1986951858}
   - component: {fileID: 1986951859}
+  - component: {fileID: 1986951860}
   m_Layer: 0
   m_Name: FrenziedWorker
   m_TagString: FrenziedWorker
@@ -15734,12 +15776,13 @@ MonoBehaviour:
   attackTrigger: 1
   attackPointLeft: {fileID: 1296009855}
   attackPointRight: {fileID: 734547010}
-  attackRange: 0.49
+  attackRange: 0.37
   attackDamage: 20
   playerLayer:
     serializedVersion: 2
     m_Bits: 1
   attackRate: 1
+  knockbackVelocity: 19.21
 --- !u!50 &1986951858
 Rigidbody2D:
   serializedVersion: 4
@@ -15775,5 +15818,49 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.069419146, y: -0.5276205}
-  m_Size: {x: 0.5507393, y: 1.944759}
+  m_Size: {x: 0.79872704, y: 1.944759}
   m_Direction: 0
+--- !u!114 &1986951860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986951852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 967452171c75d11469cf08bfef142e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+--- !u!1 &2134834653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2134834654}
+  m_Layer: 0
+  m_Name: PlayerAttackLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2134834654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134834653}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.505, y: -0.32, z: 0.1454336}
+  m_LocalScale: {x: 0.58823526, y: 0.58823526, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1934169103}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
