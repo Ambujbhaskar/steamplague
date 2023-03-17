@@ -15749,7 +15749,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986951852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.61, y: 0.49, z: 0}
+  m_LocalPosition: {x: 19.88, y: 3.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15864,3 +15864,84 @@ Transform:
   m_Father: {fileID: 1934169103}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &8092055475802212628
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8092055475107358408, guid: 0b9a4854e3e9a334eb15e46190877bd2, type: 3}
+      propertyPath: m_Name
+      value: RobotBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092055475107358411, guid: 0b9a4854e3e9a334eb15e46190877bd2, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092055475107358411, guid: 0b9a4854e3e9a334eb15e46190877bd2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092055475107358411, guid: 0b9a4854e3e9a334eb15e46190877bd2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.739
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092055475107358411, guid: 0b9a4854e3e9a334eb15e46190877bd2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.8520384
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092055475107358411, guid: 0b9a4854e3e9a334eb15e46190877bd2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092055475107358411, guid: 0b9a4854e3e9a334eb15e46190877bd2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092055475107358411, guid: 0b9a4854e3e9a334eb15e46190877bd2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092055475107358411, guid: 0b9a4854e3e9a334eb15e46190877bd2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092055475107358411, guid: 0b9a4854e3e9a334eb15e46190877bd2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092055475107358411, guid: 0b9a4854e3e9a334eb15e46190877bd2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092055475107358411, guid: 0b9a4854e3e9a334eb15e46190877bd2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092055475107358455, guid: 0b9a4854e3e9a334eb15e46190877bd2, type: 3}
+      propertyPath: velocity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092055475107358455, guid: 0b9a4854e3e9a334eb15e46190877bd2, type: 3}
+      propertyPath: attackRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092055475107358455, guid: 0b9a4854e3e9a334eb15e46190877bd2, type: 3}
+      propertyPath: attackRange
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092055475107358455, guid: 0b9a4854e3e9a334eb15e46190877bd2, type: 3}
+      propertyPath: walkTrigger
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092055475107358455, guid: 0b9a4854e3e9a334eb15e46190877bd2, type: 3}
+      propertyPath: attackTrigger
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092055475107358455, guid: 0b9a4854e3e9a334eb15e46190877bd2, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0b9a4854e3e9a334eb15e46190877bd2, type: 3}

@@ -93,8 +93,11 @@ public class PlayerMovement : MonoBehaviour
     private void Attack() {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(activeAttackPoint.position, attackRange, playerLayer);
         foreach(Collider2D enemy in hitEnemies) {
-            Debug.Log("Player is Hitting: "+ enemy.name);
-            enemy.GetComponent<FrenzyLife>().TakeDamage(attackDamage);
+            Debug.Log("Player is Hitting: " + enemy.name);
+            if (enemy.name == "Frenzy")
+                enemy.GetComponent<FrenzyLife>().TakeDamage(attackDamage);
+            else if (enemy.name == "RobotBoss")
+                enemy.GetComponent<RobotBossLife>().TakeDamage(attackDamage);
         }
     }
     private bool IsGrounded()
