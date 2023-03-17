@@ -15,13 +15,17 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform attackPointLeft;
     [SerializeField] private Transform attackPointRight;
     [SerializeField] private float attackRange = 0.5f;
-    [SerializeField] private int attackDamage = 20;
+    public int attackDamage = 40;
     [SerializeField] private LayerMask playerLayer;
-    [SerializeField] private float attackRate = 2f;
+    [SerializeField] private float attackRate = 1f;
     private float nextAttackTime = 0f;
     private Transform activeAttackPoint;
 
     private enum MovementState { idle, running, jumping, falling };
+
+    [SerializeField] AudioSource audioData;
+
+    [SerializeField] private SoundManagerScript soundManager;
 
     private void Start()
     {
@@ -29,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         playerAnim = GetComponent<Animator>();
         playerSprite = GetComponent<SpriteRenderer>();
         playerCollider = GetComponent<CapsuleCollider2D>();
+        audioData = GetComponent<AudioSource>();
         activeAttackPoint = attackPointLeft;
     }
 
@@ -37,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
         if (Time.time >= nextAttackTime) {
             if (Input.GetKeyDown(KeyCode.Mouse0)) {
                 playerAnim.SetTrigger("attack");
+                soundManager.playSound("player_attack");
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
@@ -46,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             player.velocity = new Vector2(player.velocity.x, jumpVelocity);
+            soundManager.playSound("player_jump");
         }
         UpdateAnimation(dirX);
     }
@@ -94,8 +101,10 @@ public class PlayerMovement : MonoBehaviour
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(activeAttackPoint.position, attackRange, playerLayer);
         foreach(Collider2D enemy in hitEnemies) {
             Debug.Log("Player is Hitting: "+ enemy.name);
-            if (enemy.name != "Player")
+            if (enemy.tag == "FrenziedWorker")
                 enemy.GetComponent<FrenzyLife>().TakeDamage(attackDamage);
+            else if (enemy.name == "Foreman")
+                enemy.GetComponent<Boss1Life>().TakeDamage(attackDamage);
         }
     }
     private bool IsGrounded()

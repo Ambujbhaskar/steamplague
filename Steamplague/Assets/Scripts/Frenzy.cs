@@ -21,7 +21,9 @@ public class Frenzy : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private float attackRate = 0.6f;
     [SerializeField] private float knockbackVelocity = 2f;
+    [SerializeField] private SoundManagerScript soundManager;
     private float nextAttackTime = 0f;
+    private bool playerDead = false;
     private Transform activeAttackPoint;
 
     private enum MovementState { idle, walking, running, attack };
@@ -39,8 +41,9 @@ public class Frenzy : MonoBehaviour
 
     private void Update()
     {
-        if (Time.time >= nextAttackTime && workerAnim.GetInteger("state") == 3) {
+        if (Time.time >= nextAttackTime && workerAnim.GetInteger("state") == 3 && !playerDead) {
             workerAnim.SetTrigger("attack");
+            soundManager.playSound("zombie_attack");
             nextAttackTime = Time.time + 1f / attackRate;
         }
         float dirX = 0;
@@ -116,8 +119,9 @@ public class Frenzy : MonoBehaviour
 
         foreach(Collider2D enemy in hitEnemies) {
             Debug.Log("Hitting: "+ enemy.name);
-            if (enemy.name != "FrenziedWorker")
+            if (enemy.name == "Player") {
                 enemy.GetComponent<PlayerLife>().TakeDamage(attackDamage);
+            }
         }
     }
 

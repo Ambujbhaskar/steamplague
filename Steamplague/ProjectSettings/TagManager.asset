@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FrenziedWorker
   - Deathzone
+  - Scrap
   layers:
   - Default
   - TransparentFX
@@ -48,4 +49,7 @@ TagManager:
     locked: 0
   - name: Terrain
     uniqueID: 999018303
+    locked: 0
+  - name: UI
+    uniqueID: 2246424159
     locked: 0

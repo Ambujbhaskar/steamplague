@@ -8,6 +8,9 @@ public class FrenzyLife : MonoBehaviour
     private Animator zombieAnim;
     private Frenzy movement;
     [SerializeField] private int maxHealth = 100;
+    [SerializeField] private GameObject scrapPrefab;
+    
+    [SerializeField] private SoundManagerScript soundManager;
     int currentHealth;
     void Start()
     {
@@ -25,6 +28,7 @@ public class FrenzyLife : MonoBehaviour
         Debug.Log("Frenzied Worker Taking Damage of: " + damage);
 
         zombieAnim.SetTrigger("hurt");
+        soundManager.playSound("zombie_hurt");
         if (currentHealth <= 0)
         {
             Die();
@@ -34,6 +38,9 @@ public class FrenzyLife : MonoBehaviour
     {
         Debug.Log("zombie Ded");
         zombieAnim.SetTrigger("death");
+        soundManager.playSound("zombie_death");
+        Vector3 scrapPos = new Vector3(transform.position.x, transform.position.y - 1.2f, transform.position.z);
+        Instantiate(scrapPrefab, scrapPos, Quaternion.identity);
         FreezeZombie();
     }
 
@@ -55,10 +62,4 @@ public class FrenzyLife : MonoBehaviour
     private void DestroyZombie() {
         Destroy(gameObject);
     }
-
-    // private void RestartLevel()
-    // {
-    //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    //     UnfreezeZombie();
-    // }
 }

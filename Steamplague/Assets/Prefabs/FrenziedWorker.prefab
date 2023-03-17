@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  scrapPrefab: {fileID: 2134815844710480220, guid: 267b6e03b5f1abf4abf821de0a2a8d6e, type: 3}
 --- !u!1 &5434351983551006609
 GameObject:
   m_ObjectHideFlags: 0
