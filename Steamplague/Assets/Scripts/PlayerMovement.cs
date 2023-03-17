@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private SoundManagerScript soundManager;
 
+
     private void Start()
     {
         player = GetComponent<Rigidbody2D>();
@@ -42,7 +43,19 @@ public class PlayerMovement : MonoBehaviour
         if (Time.time >= nextAttackTime) {
             if (Input.GetKeyDown(KeyCode.Mouse0)) {
                 playerAnim.SetTrigger("attack");
-                soundManager.playSound("player_attack");
+                Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(activeAttackPoint.position, attackRange, playerLayer);
+                bool didHit = false;
+
+                foreach (Collider2D enemy in hitEnemies) {
+                    if (enemy.name != "Player") {
+                        didHit = true;
+                    }
+                }
+                if (didHit) {
+                    soundManager.playSound("player_hit");
+                } else {
+                    soundManager.playSound("player_swing");
+                }
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
@@ -91,15 +104,9 @@ public class PlayerMovement : MonoBehaviour
         playerAnim.SetInteger("state", (int)state);
     }
 
-    // private void FinishEntry()
-    // {
-    //     playerAnim.SetBool("entry", false);
-    //     player.bodyType = RigidbodyType2D.Dynamic;
-    // }
-
     private void Attack() {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(activeAttackPoint.position, attackRange, playerLayer);
-        foreach(Collider2D enemy in hitEnemies) {
+        foreach (Collider2D enemy in hitEnemies) {
             Debug.Log("Player is Hitting: "+ enemy.name);
             if (enemy.tag == "FrenziedWorker")
                 enemy.GetComponent<FrenzyLife>().TakeDamage(attackDamage);

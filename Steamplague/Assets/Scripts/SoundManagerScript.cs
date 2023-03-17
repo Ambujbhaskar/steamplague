@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManagerScript : MonoBehaviour
 {
-    [SerializeField] private AudioClip player_attack, pickup_item, player_dying, player_hurt, player_jump, player_hit, zombie_attack, zombie_death, zombie_hurt;
+    [SerializeField] private AudioClip player_attack, pickup_item, player_dying, player_hurt, player_jump, player_hit, player_swing, zombie_attack, zombie_death, zombie_hurt;
     static AudioSource audioSrc;
     // Start is called before the first frame update
     void Start()
@@ -39,6 +39,9 @@ public class SoundManagerScript : MonoBehaviour
                 break;
             case "player_hit":
                 audioSrc.PlayOneShot(player_hit);
+                break;
+            case "player_swing":
+                audioSrc.PlayOneShot(player_swing);
                 break;
             case "zombie_attack":
                 audioSrc.PlayOneShot(zombie_attack);

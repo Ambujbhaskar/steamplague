@@ -37,7 +37,7 @@ public class PlayerLife : MonoBehaviour
         healthBar.transform.localScale = new Vector3((float)((float)currentHealth / (float)maxHealth), healthBar.transform.localScale.y, healthBar.transform.localScale.z);
 
         playerAnim.SetTrigger("hurt");
-        soundManager.playSound("player_hit");
+        soundManager.playSound("player_attack");
         if (currentHealth <= 0) {
             Die();
         }

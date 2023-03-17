@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/backupScene.unity
-    guid: f179b3f786c8caf4ba21f4046dbd9679
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 2a68f5bc12c1ebf4db894e74a77fc5cf
+  - enabled: 1
+    path: Assets/Scenes/backupScene.unity
+    guid: f179b3f786c8caf4ba21f4046dbd9679
   - enabled: 1
     path: Assets/Scenes/ControlScene.unity
     guid: 46622c28a8f306546bedd86b11a8ed25
